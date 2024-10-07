@@ -12,7 +12,7 @@ El ejercicio solicitaba mostrar motrar usuarios de GitHub de distintas formas, l
 > ### ⚠️ Nota
 > Este proyecto contiene una KEY por tiempo limitado, la key fue colocada porque la api de github me dejo sin solicitudes no autenticadas. Esta key será borrada el sabado 12-10-2024
 
-Para realizarla el ejercicio decidí utilizar **[Next.js](https://nextjs.org/docs/pages)** junto con sus **[Hooks](https://react.dev/reference/react)** y **[TypeScript]https://www.typescriptlang.org/);** también utilicé patrones de diseño tales como:
+Para realizarla el ejercicio decidí utilizar **[Next.js](https://nextjs.org/docs/pages)** junto con sus **[Hooks](https://react.dev/reference/react)** y **[TypeScript](https://www.typescriptlang.org/);** también utilicé patrones de diseño tales como:
 
 * Stateful / Stateless
 * Componentización
