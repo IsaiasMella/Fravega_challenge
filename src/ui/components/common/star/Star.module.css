@@ -1,0 +1,121 @@
+.star {
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+}
+
+.star > label {
+  cursor: pointer;
+  font-size: 25px;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.star > label > svg {
+  fill: #12121280;
+  transition: fill 0.3s ease;
+}
+
+.star > label::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #ff9e0b;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  animation: particle-explosion 1s ease-out;
+}
+
+.star > label::after {
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+}
+
+.star > label:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.5);
+}
+
+.star > label:hover {
+  transform: scale(1.2);
+  animation: pulse 0.6s infinite alternate;
+}
+
+/* Star glow and animation on hover */
+.star > label:hover > svg {
+  fill: #ff9e0b;
+  filter: drop-shadow(0 0 15px rgba(255, 158, 11, 0.9));
+  animation: shimmer 1s ease infinite alternate;
+}
+
+.star > input:checked + label > svg {
+  fill: #ff9e0b;
+  filter: drop-shadow(0 0 15px rgba(255, 158, 11, 0.9));
+  animation: pulse 0.8s infinite alternate;
+}
+
+.star > input:checked + label ~ label > svg,
+.star > input:checked + label > svg {
+  fill: #ff9e0b; /* Highlight the stars */
+}
+
+.star > input {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  appearance: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes particle-explosion {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(255, 158, 11, 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0 20px rgba(255, 158, 11, 1));
+  }
+}
+
+.star > input:checked + label:hover,
+.star > input:checked + label:hover ~ label {
+  fill: #e58e09;
+}
+
+.star > label:hover,
+.star > label:hover ~ label {
+  fill: #ff9e0b;
+}
+
+.star input:checked ~ label svg {
+  fill: #ffa723;
+}

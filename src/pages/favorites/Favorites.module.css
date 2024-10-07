@@ -1,11 +1,9 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100vh;
+.title {
+    margin: 0 auto;
   width: 80%;
-  margin: 0 auto;
+  text-align: center;
+  padding-bottom: .75em;
+  padding-top: .25em;
 }
 
 .container {
@@ -15,5 +13,4 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-items: center;
   gap: 2rem;
-  margin-bottom: 1rem;
 }

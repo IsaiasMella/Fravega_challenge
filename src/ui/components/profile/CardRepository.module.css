@@ -1,0 +1,31 @@
+.repo {
+  border-left: 5px solid rgba(255, 255, 255, 0.35);
+  padding: 1rem 2rem;
+  padding-top: 0;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.repo:hover {
+  border-left: 5px solid #b131fa;
+}
+
+.repo_container_title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.repo_title {
+  color: #818cf8;
+  font-size: 1.35rem;
+}
+
+.repo_title + small {
+  color: #4d7c0f;
+  border: 1px solid #4d7c0f50;
+  padding: 0.25rem 1rem;
+  border-radius: 2rem;
+}
